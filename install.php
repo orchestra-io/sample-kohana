@@ -81,18 +81,18 @@ else
 		</tr>
 		<tr>
 			<th>Cache Directory</th>
-			<?php if (is_dir(APPPATH) AND is_dir(APPPATH.'cache') AND is_writable(APPPATH.'cache')): ?>
-				<td class="pass"><?php echo APPPATH.'cache/' ?></td>
+			<?php if (is_dir(sys_get_temp_dir()) AND is_writable(sys_get_temp_dir())): ?>
+				<td class="pass"><?php echo sys_get_temp_dir() ?></td>
 			<?php else: $failed = TRUE ?>
-				<td class="fail">The <code><?php echo APPPATH.'cache/' ?></code> directory is not writable.</td>
+				<td class="fail">The <code><?php echo sys_get_temp_dir() ?></code> directory is not writable.</td>
 			<?php endif ?>
 		</tr>
 		<tr>
 			<th>Logs Directory</th>
-			<?php if (is_dir(APPPATH) AND is_dir(APPPATH.'logs') AND is_writable(APPPATH.'logs')): ?>
-				<td class="pass"><?php echo APPPATH.'logs/' ?></td>
+			<?php if (is_dir(sys_get_temp_dir()) AND is_writable(sys_get_temp_dir())): ?>
+				<td class="pass"><?php echo sys_get_temp_dir() ?></td>
 			<?php else: $failed = TRUE ?>
-				<td class="fail">The <code><?php echo APPPATH.'logs/' ?></code> directory is not writable.</td>
+				<td class="fail">The <code><?php echo sys_get_temp_dir() ?></code> directory is not writable.</td>
 			<?php endif ?>
 		</tr>
 		<tr>
